@@ -22,7 +22,7 @@ git push
 
 
 ## Docker setup
-example:
+example image:
 /# syntax=docker/dockerfile:1
 
 FROM node:18-alpine
@@ -41,6 +41,7 @@ docker run -dp 127.0.0.1:3000:3000 getting-started
 check containers :
 docker ps
 
+stop/remove container :
 docker stop ID
 docker remove ID
 
