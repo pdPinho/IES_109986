@@ -15,16 +15,14 @@ mvn exec:java -Dexec.mainClass="com.ua.pt.WeatherStarter" -Dexec.args=""
 
 ## Git tools
 
-(Important: always add a .gitignore with the right info)
+>(Important: always add a .gitignore with the right info)
 
+```
 git pull
-
 git add *
-
 git commit -m "comments"
-
 git push
-
+```
 
 ## Docker setup
 example image:
@@ -44,13 +42,13 @@ EXPOSE 3000
 
 
 
-building image :
+**building image :**
 docker build -t getting-started .
 
-run container :
+**run container :**
 docker run -dp 127.0.0.1:3000:3000 getting-started
 
-check containers :
+check containers :**
 docker ps
 
 stop/remove container :
