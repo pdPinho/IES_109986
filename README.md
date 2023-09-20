@@ -42,6 +42,8 @@ CMD ["node", "src/index.js"]
 
 EXPOSE 3000
 
+
+
 building image :
 docker build -t getting-started .
 
@@ -55,6 +57,8 @@ stop/remove container :
 docker stop ID
 
 docker remove ID
+
+
 
 docker volume create todo-db
 
