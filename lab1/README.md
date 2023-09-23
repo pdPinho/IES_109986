@@ -6,6 +6,9 @@
 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 mvn package
 mvn exec:java -Dexec.mainClass="com.ua.pt.WeatherStarter" -Dexec.args=""
+
+mvn clean package
+mvn install:install-file -Dfile="file.jar"
 ```
 
 **groupID = COMPANY'S_NAME**
@@ -27,7 +30,6 @@ git push
 >example image:
 
 ```
-/# syntax=docker/dockerfile:1
 FROM node:18-alpine
 WORKDIR /app
 COPY . .

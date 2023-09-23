@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.lookup.Log4jLookup;
 
 import java.util.Random;
 
@@ -20,7 +19,7 @@ public class WeatherStarter {
         int cityID = rand.nextInt(citiesID.length);
 
         WeatherCall weatherCall = new WeatherCall();
-        Logger logger = LogManager.getLogger(Log4jLookup.class);
+        Logger logger = LogManager.getLogger("app.log");
 
         while(true){
             String[] data = weatherCall.getWeather(citiesID[cityID]);
