@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.Random;
 
 /**
- * demonstrates the use of the IPMA API for weather forecast
+ * Tried to create logs onto a log file but couldn't make it work in the end
  */
 public class WeatherStarter {
 
@@ -19,7 +19,7 @@ public class WeatherStarter {
         int cityID = rand.nextInt(citiesID.length);
 
         WeatherCall weatherCall = new WeatherCall();
-        Logger logger = LogManager.getLogger("app.log");
+        Logger logger = LogManager.getLogger(WeatherStarter.class);
 
         while(true){
             String[] data = weatherCall.getWeather(citiesID[cityID]);
