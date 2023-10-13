@@ -21,6 +21,10 @@ public class WeatherStarter {
         WeatherCall weatherCall = new WeatherCall();
         Logger logger = LogManager.getLogger(WeatherStarter.class);
 
+        System.out.println(logger.isErrorEnabled());
+        System.out.println(logger.isWarnEnabled());
+        System.out.println(logger.isInfoEnabled());
+        System.out.println(logger.isDebugEnabled());
         while(true){
             String[] data = weatherCall.getWeather(citiesID[cityID]);
             logger.info(cityID + "," + data[0] + ", " + data[1] + "\n");
