@@ -1,0 +1,1 @@
+Adapted ex2 to this exercise, hence why some functions aren't exactly needed (such as getting movie by ID)
