@@ -1,19 +1,19 @@
 services:
   sql:
-    image: mysql/mysql-server:5.7
-    container_name: ies_mysql_ex3
+    image: mysql/mysql-server:latest
     environment:
       - MYSQL_DATABASE=demo
       - MYSQL_ROOT_PASSWORD=secret1
       - MYSQL_USER=demo
       - MYSQL_PASSWORD=secret2
     ports: 
-      - "33060:3306"
-  app:
+      - 33060:3306
+  spring:
+    image: eclipse-temurin:17-jdk-alpine
+    volumes:
+      - ./app/target/:/app/
     depends_on:
       - sql
-    build: ./app
     ports:
-       - "8080:8080"
-    volumes:
-    - .m2:/root/.m2
+       - 8080:8080
+    command: java -jar /app/app-0.0.1-SNAPSHOT.jar
